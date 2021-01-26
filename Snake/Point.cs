@@ -24,6 +24,38 @@ namespace Snake
 			sym = _sym;
 		}
 
+		//
+		public Point(Point p)
+		{
+			x = p.x;
+			y = p.y;
+			sym = p.sym;
+		}
+		
+		//Определения движения змейки
+		public void Move(int offset, Direction direction)
+		{
+			if (direction == Direction.RIGHT)
+			{
+				x = x + offset;
+			}
+			else if (direction == Direction.LEFT)
+			{
+				x = x - offset;
+			}
+			else if (direction == Direction.UP)
+			{
+				y = y + offset;
+			}
+			else if (direction == Direction.DOWN)
+			{
+				y = y - offset;
+			}
+			else
+				Console.WriteLine("Wrong");
+		}
+
+		//Отрисовка точек в консоле.
 		public void Drow()
 		{
 			Console.SetCursorPosition(x, y);
