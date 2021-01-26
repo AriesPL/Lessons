@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-	class VerticalLine
+	class VerticalLine : Figura
 	{
-		List<Point> lPoint;
-
+		////Класс вертикальных линий наследуемый от фигуры с созданием точек.
 		public VerticalLine(int x, int yLeft,int yRight, char sym)
 		{
 			lPoint = new List<Point>();
@@ -17,14 +16,6 @@ namespace Snake
 			{
 				Point p = new Point(x, y, sym);
 				lPoint.Add(p);
-			}
-
-		}
-		public void Drow()
-		{
-			foreach (Point p in lPoint)
-			{
-				p.Drow();
 			}
 
 		}

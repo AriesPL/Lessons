@@ -10,16 +10,15 @@ namespace Snake
 	{
 		static void Main(string[] args)
 		{
+			// Размер окна консоле
+			Console.SetBufferSize(120, 30);
+
 			
-
-			Point p1 = new Point(1,2,'%');
-
-			p1.Drow();
-
-			HorizontalLine horLineUp = new HorizontalLine(0,50,0,'+');
-			HorizontalLine horLineDown = new HorizontalLine(0, 50, 25, '+');
-			VerticalLine verticalLineLeft = new VerticalLine(0, 0, 25, '|');
-			VerticalLine verticalLineRight = new VerticalLine(50, 0, 25, '|');
+			// Отрисовка полей в консоле
+			HorizontalLine horLineUp = new HorizontalLine(0,119,0,'+');
+			HorizontalLine horLineDown = new HorizontalLine(0, 119, 28, '+');
+			VerticalLine verticalLineLeft = new VerticalLine(0, 0, 28, '|');
+			VerticalLine verticalLineRight = new VerticalLine(119, 0, 28, '|');
 			horLineUp.Drow();
 			horLineDown.Drow();
 			verticalLineLeft.Drow();

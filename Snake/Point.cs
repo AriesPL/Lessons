@@ -8,6 +8,7 @@ namespace Snake
 {
 	class Point
 	{
+		//Класс Точки с пораметрами x,y,sym и конструктором.
 		public int x;
 		public int y;
 		public char sym;

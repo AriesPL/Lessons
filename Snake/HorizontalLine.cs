@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-	class HorizontalLine
+	class HorizontalLine : Figura
 	{
-		List<Point> lPoint;
-
+		//Класс горизонтальных линий наследуемый от фигуры с созданием точек.
 		public HorizontalLine(int xLeft, int xRight, int y, char sym)
 		{
 			lPoint = new List<Point>();
@@ -20,17 +19,5 @@ namespace Snake
 			}
 
 		}
-
-		
-
-		public void Drow() 
-		{ 
-			foreach(Point p in lPoint)
-			{
-				p.Drow();
-			}
-
-		}
-		
 	}
 }
