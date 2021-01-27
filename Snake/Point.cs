@@ -32,7 +32,7 @@ namespace Snake
 			sym = p.sym;
 		}
 		
-		//Определения движения змейки
+		//Функция определения движения змейки
 		public void Move(int offset, Direction direction)
 		{
 			if (direction == Direction.RIGHT)
@@ -45,21 +45,27 @@ namespace Snake
 			}
 			else if (direction == Direction.UP)
 			{
-				y = y + offset;
+				y = y - offset;
 			}
 			else if (direction == Direction.DOWN)
 			{
-				y = y - offset;
+				y = y + offset;
 			}
 			else
 				Console.WriteLine("Wrong");
 		}
 
-		//Отрисовка точек в консоле.
+		//Функция отрисовка точек в консоле.
 		public void Drow()
 		{
 			Console.SetCursorPosition(x, y);
 			Console.Write(sym);
+		}
+
+		public void Clear()
+		{
+			sym = ' ';
+			Drow();
 		}
 
 
