@@ -46,13 +46,13 @@ namespace Snake
 
 		public void HandKey(ConsoleKey key)
 		{
-			if (key == ConsoleKey.RightArrow)
+			if (key == ConsoleKey.RightArrow && direction != Direction.LEFT)
 				direction = Direction.RIGHT;
-			else if (key == ConsoleKey.LeftArrow)
+			else if (key == ConsoleKey.LeftArrow && direction != Direction.RIGHT)
 				direction = Direction.LEFT;
-			else if (key == ConsoleKey.DownArrow)
+			else if (key == ConsoleKey.DownArrow && direction != Direction.UP)
 				direction = Direction.DOWN;
-			else if (key == ConsoleKey.UpArrow)
+			else if (key == ConsoleKey.UpArrow && direction != Direction.DOWN)
 				direction = Direction.UP;
 		}
 	}
