@@ -33,7 +33,7 @@ namespace Snake
 			lPoint.Add(head);
 
 			tail.Clear();
-			head.Drow();
+			head.Draw();
 		}
 
 		private Point GetNextPoint()

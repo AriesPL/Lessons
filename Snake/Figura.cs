@@ -12,11 +12,11 @@ namespace Snake
 		//и методом отрисовкой полей
 		protected List<Point> lPoint;
 
-		public void Drow()
+		public void Draw()
 		{
 			foreach (Point p in lPoint)
 			{
-				p.Drow();
+				p.Draw();
 			}
 
 		}

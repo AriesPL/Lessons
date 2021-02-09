@@ -20,19 +20,19 @@ namespace Snake
 			HorizontalLine horLineDown = new HorizontalLine(0, 119, 28, '+');
 			VerticalLine verticalLineLeft = new VerticalLine(0, 0, 28, '|');
 			VerticalLine verticalLineRight = new VerticalLine(119, 0, 28, '|');
-			horLineUp.Drow();
-			horLineDown.Drow();
-			verticalLineLeft.Drow();
-			verticalLineRight.Drow();
+			horLineUp.Draw();
+			horLineDown.Draw();
+			verticalLineLeft.Draw();
+			verticalLineRight.Draw();
 
 
-			Point p = new Point(4, 5, '*');
+			Point p = new Point(4, 5, '#');
 			Snake snake = new Snake(p, 4, Direction.RIGHT);
-			snake.Drow();
+			snake.Draw();
 
-			FoodBilder foodBilder = new FoodBilder(116, 25, '#');
+			FoodBilder foodBilder = new FoodBilder(118, 27, '8');
 			Point food = foodBilder.GiveMeFood();
-			food.Drow();
+			food.Draw();
 
 
 			
@@ -41,7 +41,7 @@ namespace Snake
 				if(snake.Eat(food))
 				{
 					food = foodBilder.GiveMeFood();
-					food.Drow();
+					food.Draw();
 				}
 				else
 				{

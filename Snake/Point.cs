@@ -56,7 +56,7 @@ namespace Snake
 		}
 
 		//Функция отрисовка точек в консоле.
-		public void Drow()
+		public void Draw()
 		{
 			Console.SetCursorPosition(x, y);
 			Console.Write(sym);
@@ -65,7 +65,7 @@ namespace Snake
 		public void Clear()
 		{
 			sym = ' ';
-			Drow();
+			Draw();
 		}
 
 		public bool IsHit(Point p)
