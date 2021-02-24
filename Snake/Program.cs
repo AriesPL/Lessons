@@ -14,32 +14,35 @@ namespace Snake
 			// Размер окна консоле
 			Console.SetBufferSize(120, 30);
 
-			
+
 			// Отрисовка полей в консоле
-			HorizontalLine horLineUp = new HorizontalLine(0,119,0,'+');
-			HorizontalLine horLineDown = new HorizontalLine(0, 119, 28, '+');
-			VerticalLine verticalLineLeft = new VerticalLine(0, 0, 28, '|');
-			VerticalLine verticalLineRight = new VerticalLine(119, 0, 28, '|');
-			horLineUp.Draw();
-			horLineDown.Draw();
-			verticalLineLeft.Draw();
-			verticalLineRight.Draw();
+			Wall walls = new Wall(120, 30);
+			walls.Draw();
 
 
 			Point p = new Point(4, 5, '#');
 			Snake snake = new Snake(p, 4, Direction.RIGHT);
 			snake.Draw();
 
+		
 			FoodBilder foodBilder = new FoodBilder(118, 27, '8');
 			Point food = foodBilder.GiveMeFood();
 			food.Draw();
-
-
 			
-			while(true)
+
+
+
+
+
+			while (true)
 			{
+				if(walls.IsHit(snake) || snake.IsHitTail())
+				{
+					break;
+				}
 				if(snake.Eat(food))
 				{
+
 					food = foodBilder.GiveMeFood();
 					food.Draw();
 				}

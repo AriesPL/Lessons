@@ -15,11 +15,11 @@ namespace Snake
 
 		Random rnd = new Random();
 
-		public FoodBilder(int wightWindow, int hightWindow, char food)
+		public FoodBilder(int _wightWindow, int _hightWindow, char _food)
 		{
-			this.wightWindow = wightWindow;
-			this.hightWindow = hightWindow;
-			this.food = food;
+			wightWindow = _wightWindow;
+			hightWindow = _hightWindow;
+			food = _food;
 		}
 
 		public Point GiveMeFood()

@@ -24,7 +24,7 @@ namespace Snake
 			sym = _sym;
 		}
 
-		//
+		
 		public Point(Point p)
 		{
 			x = p.x;
@@ -51,8 +51,7 @@ namespace Snake
 			{
 				y = y + offset;
 			}
-			else
-				Console.WriteLine("Wrong");
+		
 		}
 
 		//Функция отрисовка точек в консоле.
