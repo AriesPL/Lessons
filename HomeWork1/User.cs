@@ -14,10 +14,18 @@ namespace HomeWork1
 		public int old;
 		public double weight;
 		public double hieght;
+		public string town;
 
 		public User()
 		{
 
+		}
+
+		public User(string name, string secondname, string town)
+		{
+			this.name = name;
+			this.secondname = secondname;
+			this.town = town;
 		}
 
 		public User(string name, string secondname,int old,double weight,double hieght)
@@ -35,8 +43,13 @@ namespace HomeWork1
 			double i;
 			double h = hieght / 100;
 			i = weight/(h*h);
-			Console.WriteLine($"Ваша масса тела {i}");
+			Console.WriteLine($"Ваша масса тела: {i}");
 
+		}
+
+		public void PrintCentr()
+		{
+			Console.WriteLine($"\n{secondname}{name} из {town} ");
 		}
 
 		public void Print()
