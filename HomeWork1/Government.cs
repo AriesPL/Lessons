@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace HomeWork1
 {
-	 class Government
+	 public class Government
 	{
-		public Government()
-		{
-
-		}
+		
 		public void Pouse() 
 		{
 			Console.Read();
 		}
 
-		public void Print()
+		public void Print(string x)
 		{
 			Console.WriteLine();
 		}
+
+		
 	}
 }

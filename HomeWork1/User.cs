@@ -49,7 +49,11 @@ namespace HomeWork1
 
 		public void PrintCentr()
 		{
-			Console.WriteLine($"\n{secondname}{name} из {town} ");
+			string text = $"{secondname} {name} из {town}a";
+			var width = Console.WindowWidth;
+			var paddingWidht = width / 2 + text.Length / 2;
+
+			Console.WriteLine("\n{0," + paddingWidht + "}",text);
 		}
 
 		public void Print()
