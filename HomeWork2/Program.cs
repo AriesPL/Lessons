@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HomeWork1;
+
 
 
 namespace HomeWork2
@@ -11,16 +13,18 @@ namespace HomeWork2
 	{
 		static void Main(string[] args)
 		{
+			Government go = new Government();
+
 			//1:Метод возвращающий минимальное из 3 чисел. 
 			#region Минимальное значение
-			Console.WriteLine("Task 1: Возврат минимального значения \n");
+			go.Print("Task 1: Возврат минимального значения \n");
 			MinNumber();
 
 			#endregion
 
 			//2:Метод подсчета цифр числа.
 			#region Колличества знаков
-			Console.WriteLine("\nTask 2: Метод подсчета колличества знаков в числе");
+			go.Print("\nTask 2: Метод подсчета колличества знаков в числе");
 
 			int x = 12345;
 
@@ -28,25 +32,26 @@ namespace HomeWork2
 
 			int count = CharCount(y);
 
-			Console.WriteLine($"\n{count}");
+			go.Print($"\n{count}");
 			#endregion
 
 			//3:Подсчет суммы всех веденных нечетных чисел введенных ползователем пока не будет веден 0.
 
 
 
-			//4:Проверка Логина и пароля.
-
+			//4:Проверка Логина и пароля. login = root, Pass = GeekBrains.
+			#region Проверка
 			string login;
 			string pass;
 			int count1 = 0;
+
 			do 
 				{
 					
-					Console.WriteLine("Login:");
+					go.Print("Login:");
 					login = Convert.ToString(Console.ReadLine());
 
-					Console.WriteLine("Password:");
+					go.Print("Password:");
 					pass = Convert.ToString(Console.ReadLine());
 
 					
@@ -56,17 +61,30 @@ namespace HomeWork2
 				while (login != "root" && pass != "GeekBrains" && count1 < 3);
 			if(login == "root" && pass == "GeekBrains")
 			{
-				Console.WriteLine("You enter. Welcome.");
+				go.Print("You enter. Welcome.");
 			}
-			else  
-			{
-				Console.WriteLine("You Chanse over.");
-			}
+			else  			
+				go.Print("You Chanse over.");
 
-			//5:Улутшеная программа IMT
+			#endregion
 
+			/*5:а)Улутшить программу IMT
+				б)Расчитать на сколько надо похудеть или набрать.
+			 
+			 Данное задание имеет ссылку на проэкт HomeWork1*/
+			#region IMT 0.1
+			User people = new User();
+			go.Print("Введите ваш Вес");
+			people.weight = Convert.ToDouble(Console.ReadLine());
 
-			//6:Подсчет хороших чисел от 1 до 1000000000, и сколько времени это займет, использую DateTime.
+			go.Print("Введите ваш Рост");
+			people.hieght = Convert.ToDouble(Console.ReadLine());
+
+			people.IMT();
+
+			#endregion
+
+			//6:Подсчет хороших чисел от 1 до 1000000000, и сколько времени это займет, используя DateTime.
 
 
 			/*7:a)Рекурсивный метод который выводит числа от a до b (a<b)

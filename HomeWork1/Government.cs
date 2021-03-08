@@ -16,9 +16,8 @@ namespace HomeWork1
 
 		public void Print(string x)
 		{
-			Console.WriteLine();
+			Console.WriteLine(x);
 		}
 
-		
 	}
 }

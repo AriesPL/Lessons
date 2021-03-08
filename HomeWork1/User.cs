@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork1
 {
-	class User
+	public class User
 	{
 		//Создание класса не входит в эту домашнную работу.
 		public string name;
@@ -43,8 +43,46 @@ namespace HomeWork1
 			double i;
 			double h = hieght / 100;
 			i = weight/(h*h);
-			Console.WriteLine($"Ваша масса тела: {i}");
+			Console.WriteLine($"Ваша масса тела: {i:f1}");
 
+			#region HomeWork2
+			if (i < 16)
+			{
+				i = 25 - i;
+				Console.WriteLine($"Ярко выраженный дефецит массы тела. \n До нормы нужно набрать {i:f1} кг.");
+			}
+			else if(i >= 16.0 && i < 18.5)
+			{
+				i = 25 - i;
+				Console.WriteLine($"Дефецит массы тела. \n До нормы нужно набрать {i:f1} кг.");
+			}
+			else if(i >= 18.5 && i < 25)
+			{
+				Console.WriteLine("Норма");
+			}
+			else if(i >= 25 && i < 30)
+			{
+				i = i - 25;
+				Console.WriteLine($"Предожирение. \n До нормы нужно сбросить {i:f1} кг.");
+			}
+			else if(i >= 30 && i < 35)
+			{
+				i = i - 30;
+				Console.WriteLine($"Ожирение первой степени. \n До нормы нужно сбросить {i:f1} кг.");
+			}
+			else if(i >= 35 && i < 40)
+			{
+				i = i - 35;
+				Console.WriteLine($"Ожирение второй стерпени. \n До нормы нужно сбросить {i:f1} кг.");
+			}
+			else if (i >= 45)
+			{
+				i = i - 40;
+				Console.WriteLine($"Ожирение третей степени. \n До нормы нужно сбросить {i:f1} кг.");
+			}
+			else
+				Console.WriteLine("Проблема, что-то сломалось.");
+			#endregion
 		}
 
 		public void PrintCentr()

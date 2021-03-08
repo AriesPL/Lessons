@@ -43,7 +43,7 @@ namespace HomeWork1
 			
 			people.Print();
 
-			Thread.Sleep(1000);
+			Thread.Sleep(2000);
 
 			#endregion
 
@@ -54,7 +54,7 @@ namespace HomeWork1
 			Console.WriteLine("\nИндекс массы тела");
 			people.IMT();
 
-			Thread.Sleep(1000);
+			Thread.Sleep(2000);
 			#endregion
 
 			/* 3:Подсчитать растояние между двумя точками  с координатами x1,x2, y1,y2
@@ -71,7 +71,7 @@ namespace HomeWork1
 			
 			go.Print(text);
 			
-			Thread.Sleep(1000);
+			Thread.Sleep(2000);
 			#endregion
 
 			/* 4:Программа обмена значениями:
@@ -108,7 +108,7 @@ namespace HomeWork1
 				б)Сделать собственные методы Вывода.
 			*/
 			#region Вывод текста по центру
-			User people2 = new User("Alexey", "Sergeev", "Tomst");
+			User people2 = new User("Alexey", "Sergeev", "Tomsk");
 			people2.PrintCentr();
 			#endregion
 
