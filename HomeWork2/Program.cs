@@ -37,6 +37,31 @@ namespace HomeWork2
 
 			//4:Проверка Логина и пароля.
 
+			string login;
+			string pass;
+			int count1 = 0;
+			do 
+				{
+					
+					Console.WriteLine("Login:");
+					login = Convert.ToString(Console.ReadLine());
+
+					Console.WriteLine("Password:");
+					pass = Convert.ToString(Console.ReadLine());
+
+					
+					count1++;
+					
+				}
+				while (login != "root" && pass != "GeekBrains" && count1 < 3);
+			if(login == "root" && pass == "GeekBrains")
+			{
+				Console.WriteLine("You enter. Welcome.");
+			}
+			else  
+			{
+				Console.WriteLine("You Chanse over.");
+			}
 
 			//5:Улутшеная программа IMT
 
