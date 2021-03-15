@@ -86,6 +86,32 @@ namespace HomeWork2
 
 			//6:Подсчет хороших чисел от 1 до 1000000000, и сколько времени это займет, используя DateTime.
 
+			#region Хорошие числа.
+
+			int minNum = 1;
+			int maxNum = 1000000;
+			int goodNumber = 0;
+			int temp;
+			int testnum;
+			DateTime startTime = DateTime.Now;
+			go.Print(startTime);
+
+			for (int i = minNum; i < maxNum; i++)
+			{
+				temp = 0;
+				testnum = i;
+				while (testnum != 0)
+				{
+					temp += testnum % 10;
+					testnum /= 10;
+				}
+				if (i % temp == 0) 
+					goodNumber++;
+			}
+			DateTime finishTime = DateTime.Now;
+			TimeSpan durationTime = finishTime - startTime;
+			go.Print($"\n{goodNumber}\n{durationTime}");
+			#endregion 
 
 			/*7:a)Рекурсивный метод который выводит числа от a до b (a<b)
 				б)Рекурсивный метод который считает сумму от a до b
@@ -93,7 +119,7 @@ namespace HomeWork2
 
 
 
-			Console.Read();
+			go.Pause();
 		}
 
 		private static int CharCount(string y)

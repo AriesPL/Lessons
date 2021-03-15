@@ -115,7 +115,7 @@ namespace HomeWork1
 			//6: Создать свой класс с методами Print , Pause.
 			//Class Goverment ( Включает в себя методы Print , Pause )
 
-			go.Pouse();
+			go.Pause();
 		}
 
 		private static double Lenght(int x1, int x2, int y1, int y2)
